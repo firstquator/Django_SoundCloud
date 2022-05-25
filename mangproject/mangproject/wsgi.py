@@ -1,5 +1,5 @@
 """
-WSGI config for myproject project.
+WSGI config for mangproject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mangproject.settings')
 
 application = get_wsgi_application()
