@@ -11,11 +11,18 @@
 {% block content%}
 <div class="signin">
   <h1>Sign in</h1>
+  {% if error %}
+  <span class="error__message">
+    {{error}}
+  </span>
+  {% endif %}
   <form class="signin__form" action="{% url 'signin' %}" method="POST">
+    {% csrf_token %}
     <h3>Username</h3>
     <input type="text" placeholder="Your username" name="username">
     <h3>Password</h3>
     <input type="pasword" placeholder="Your password" name="password">
+    <input type="submit" value="제출하기">
   </form>
 </div>
 {% endblock %}

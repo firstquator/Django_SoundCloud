@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link 
+      rel="stylesheet" 
+      href="{% static 'CSS/home/home.css' %}" 
+      type="text/css"
+  />
+{% endblock %}
+{% block content %}
+<h1>Upload Music</h1>
+<form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <h3>Genre</h3>
+  <input type="text" name="genre">
+  <h3>Name of music</h3>
+  <input type="text" name="name">
+  <h3>Thumbnail</h3>
+  <input type="file" name="thumbnail">
+  <input type="submit" value="제출하기">
+</form>
+{% endblock %}

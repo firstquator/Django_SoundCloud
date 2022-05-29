@@ -11,13 +11,18 @@
 {% block content%}
 <div class="signin">
   <h1>Create Account</h1>
+  <span class="error__message">
+    {{error}}
+  </span>
   <form class="signin__form" action="{% url 'signup' %}" method="POST">
+    {% csrf_token %}
     <h3>Username</h3>
     <input type="text" placeholder="Username" name="username">
     <h3>Password</h3>
     <input type="pasword" placeholder="Password" name="password">
     <h3>Check Password</h3>
     <input type="password" placeholder="Re : Password" name="passwordCheck">
+    <input type="submit" value="제출하기">
   </form>
 </div>
 {% endblock %}

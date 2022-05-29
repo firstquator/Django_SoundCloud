@@ -37,4 +37,8 @@ def signin(request):
       else:
         return render(request, 'signin.html', { 'error': "사용자 이름 혹은 패스워드를 다시 확인해주세요." })
   else:
-      return render(request, 'signup.html')
+      return render(request, 'signin.html')
+
+def logout(request):
+  auth.logout(request)
+  return redirect('/')

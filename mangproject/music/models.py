@@ -5,4 +5,4 @@ class Playlist(models.Model):
   genre = models.CharField(max_length = 20)
   name = models.CharField(max_length = 30)
   pub_data = models.DateTimeField('data published')
-  thumbnail = models.ImageField(upload_to = 'image')
+  thumbnail = models.ImageField(blank = True, upload_to = 'thumnail/%Y/%m/%d')
