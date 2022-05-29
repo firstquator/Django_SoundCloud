@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link 
+      rel="stylesheet" 
+      href="{% static 'CSS/home/home.css' %}" 
+      type="text/css"
+  />
+{% endblock %}
+{% block content %}
+<div class="playlist__info">
+  <div class="info__text">
+    <h1>{{playlist.name}}</h1>
+    <h3>SoundCloud</h3>
+    <span>{{playlist.pub_date}}</span>
+  </div>
+  <div class="info__thumbnail">
+    <img src="{{playlist.thumbnail.url}}" alt="">
+  </div>
+</div>
+{% endblock %}

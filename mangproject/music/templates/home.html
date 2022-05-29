@@ -18,7 +18,7 @@
         </div>
         <div class="playlists__box__itemList">
           {% for playlist in playlists %}
-            <a href="">
+            <a href="{% url 'playlist_detail' playlist.id %}">
               <div class="playlists__box__item">
                 <img src="{{playlist.thumbnail.url}}" alt="">
                 <span class="playlists__box__item__name">{{playlist.name}}</span>
@@ -29,7 +29,7 @@
         </div>
       </section>
     </div>
-    <div class="home__right">
+    <div class="home__right fixed">
       <section class="go__mobile fixed">
         <h3 class="go__mobile__title">Go mobile</h3>
         <div class="go__mobile__buttons">
@@ -43,6 +43,4 @@
       </section>
     </div>
   </div>
-
-
 {% endblock %}

@@ -3,14 +3,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 46px;
+  height: var(--nav-height);
   color: var(--nav-button-color);
   background-color: #333;
   font-weight: 100;
 }
 
 .fixed {
-  position: sticky;
+  position: fixed;
 }
 
 .header__container {

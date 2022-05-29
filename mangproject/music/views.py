@@ -15,7 +15,7 @@ def upload(request):
     playlist = Playlist()
     playlist.genre = request.POST.get('genre')
     playlist.name = request.POST.get('name')
-    playlist.pub_data = timezone.datetime.now()
+    playlist.pub_date = timezone.datetime.now()
     try:
       playlist.thumbnail = request.FILES['thumbnail']
     except:
@@ -26,3 +26,6 @@ def upload(request):
   else:
     return render(request, 'upload.html')
   
+def playlist_detail(request, playlist_id):
+  playlist_detail = Playlist.objects.get(id = playlist_id)
+  return render(request, 'playlist_detail.html', {'playlist': playlist_detail})

@@ -1,5 +1,6 @@
 :root {
   /* Nav value */
+  --nav-height: 46px;
   --nav-width: 1240px;
   --nav-menu-padding: 12px 0px;
   --nav-menu-width: 105px;

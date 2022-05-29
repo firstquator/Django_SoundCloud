@@ -8,7 +8,11 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: 200vh;
+}
+
+.main {
+  padding-top: var(--nav-height);
 }
 
 .main__container {
