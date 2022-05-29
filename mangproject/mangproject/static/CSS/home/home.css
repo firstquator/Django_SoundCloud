@@ -1,4 +1,15 @@
+@import '../variable.css';
+
 /* home.html */
+
+.home {
+  display: flex;
+}
+
+.home__left {
+  width: calc(100% - var(--home-fixed-container));
+  height: 100%;
+}
 
 .home__headingTitle {
   font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
@@ -46,4 +57,40 @@
 .playlists__box__item__genre {
   font-size: 14px;
   color: #999;
+}
+
+.home__right {
+  position: sticky;
+  width: var(--home-fixed-container);
+  height: 100%;
+}
+
+.go__mobile__title {
+  font-size: 14px;
+  color: #999;
+}
+
+.go__mobile__buttons {
+  margin: 15px 0px;
+}
+
+.go__mobile__buttons button {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.go__mobile__subtext {
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.go__mobile__language {
+  font-size: 10px;
+}
+
+.go__mobile__language span {
+  color: #38d;
 }

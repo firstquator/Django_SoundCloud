@@ -2,10 +2,20 @@
 @import 'variable.css';
 @import 'nav.css';
 
+body {
+  background-color: rgba(204,204,204,0.3);
+
+}
+
+main {
+  height: 100vh;
+}
+
 .main__container {
   margin: 0 auto;
   padding: var(--main-padding);
   width: var(--nav-width);
   height: 100%;
+  background-color: #fff;
   box-sizing: border-box;
 }

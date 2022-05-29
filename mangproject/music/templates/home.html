@@ -8,22 +8,41 @@
   />
 {% endblock %}
 {% block content %}
-  <h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
-  <section class="playlists__box">
-    <div class="playlists__box__title">
-      <h3>Charts: Top50</h3>
-      <span>The most played tracks on SoundCloud this week</span> 
+  <div class="home">
+    <div class="home__left">
+      <h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
+      <section class="playlists__box">
+        <div class="playlists__box__title">
+          <h3>Charts: Top50</h3>
+          <span>The most played tracks on SoundCloud this week</span> 
+        </div>
+        <div class="playlists__box__itemList">
+          {% for playlist in playlists %}
+            <a href="">
+              <div class="playlists__box__item">
+                <img src="{{playlist.thumbnail.url}}" alt="">
+                <span class="playlists__box__item__name">{{playlist.name}}</span>
+                <span class="playlists__box__item__genre">{{playlist.genre}}</span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
     </div>
-    <div class="playlists__box__itemList">
-      {% for playlist in playlists %}
-        <a href="">
-          <div class="playlists__box__item">
-            <img src="{{playlist.thumbnail.url}}" alt="">
-            <span class="playlists__box__item__name">{{playlist.name}}</span>
-            <span class="playlists__box__item__genre">{{playlist.genre}}</span>
-          </div>
-        </a>
-      {% endfor %}
+    <div class="home__right">
+      <section class="go__mobile fixed">
+        <h3 class="go__mobile__title">Go mobile</h3>
+        <div class="go__mobile__buttons">
+          <button>App Store</button>
+          <button>Google play</button>
+        </div>
+        <p class="go__mobile__subtext">
+          Legal ⁃ Privacy ⁃ Cookie Policy ⁃ Consent Manager <br> ⁃ Imprint ⁃ Creator Resources ⁃ Blog ⁃ Charts ⁃
+        </p>
+        <p class="go__mobile__language"><span class="go__mobile__language__color">Language:</span>English (US)</p>
+      </section>
     </div>
-  </section>
+  </div>
+
+
 {% endblock %}
