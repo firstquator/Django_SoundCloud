@@ -6,18 +6,20 @@ from .models import Playlist
 # Create your views here.
 
 def home(request):  
-  playlists = Playlist.objects
+  playlists = Playlist.objects.all()
 
   return render(request, 'home.html', {'playlists': playlists})
 
 def upload(request):
   if request.method == 'POST':
     playlist = Playlist()
-    playlist.genre = request.POST.get('genre').split(",")
+    playlist.genre = request.POST.get('genre')
     playlist.name = request.POST.get('name')
     playlist.pub_data = timezone.datetime.now()
-    playlist.thumbnail = request.FILES['thumbnail']
-    print(playlist.thumbnail)
+    try:
+      playlist.thumbnail = request.FILES['thumbnail']
+    except:
+      pass
     playlist.save()
 
     return redirect('/')

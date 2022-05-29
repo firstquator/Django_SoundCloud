@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 {% block css %}
   {% load static %}
-  <link 
+  <!-- <link 
       rel="stylesheet" 
       href="{% static 'CSS/home/home.css' %}" 
       type="text/css"
-  />
+  /> -->
 {% endblock %}
 {% block content %}
-<h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
+  <h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
+  <section>
+    <span>The most played tracks on SoundCloud this week</span>
+    {% for playlist in playlists %}
+      <div>
+        <img src="{{playlist.thumbnail.url}}" alt="">
+        <span>{{playlist.name}}</span>
+        <span>{{playlist.genre}}</span>
+      </div>
+    {% endfor %}
+  </section>
 {% endblock %}
