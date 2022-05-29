@@ -1,7 +1,49 @@
-/*  */
+/* home.html */
 
-.main__container {
-  margin: 0 auto;
-  width: var(--nav-width);
-  height: 100%;
+.home__headingTitle {
+  font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.playlists__box__itemList {
+  display: flex;
+  overflow: hidden;
+}
+
+.playlists__box__title {
+  margin-bottom: 20px;
+}
+
+.playlists__box__title h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.playlists__box__title span {
+  font-size: 14px;
+  color: #999;
+}
+
+.playlists__box__item {
+  margin-right: 15px;
+}
+
+.playlists__box__item img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.playlists__box__item span {
+  display: block;
+}
+
+.playlists__box__item__name {
+  font-size: 16px;
+}
+
+.playlists__box__item__genre {
+  font-size: 14px;
+  color: #999;
 }

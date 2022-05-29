@@ -1,22 +1,29 @@
 {% extends 'base.html' %}
 {% block css %}
   {% load static %}
-  <!-- <link 
+  <link 
       rel="stylesheet" 
       href="{% static 'CSS/home/home.css' %}" 
       type="text/css"
-  /> -->
+  />
 {% endblock %}
 {% block content %}
   <h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
-  <section>
-    <span>The most played tracks on SoundCloud this week</span>
-    {% for playlist in playlists %}
-      <div>
-        <img src="{{playlist.thumbnail.url}}" alt="">
-        <span>{{playlist.name}}</span>
-        <span>{{playlist.genre}}</span>
-      </div>
-    {% endfor %}
+  <section class="playlists__box">
+    <div class="playlists__box__title">
+      <h3>Charts: Top50</h3>
+      <span>The most played tracks on SoundCloud this week</span> 
+    </div>
+    <div class="playlists__box__itemList">
+      {% for playlist in playlists %}
+        <a href="">
+          <div class="playlists__box__item">
+            <img src="{{playlist.thumbnail.url}}" alt="">
+            <span class="playlists__box__item__name">{{playlist.name}}</span>
+            <span class="playlists__box__item__genre">{{playlist.genre}}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
   </section>
 {% endblock %}

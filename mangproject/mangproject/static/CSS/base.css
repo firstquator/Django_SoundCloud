@@ -4,6 +4,8 @@
 
 .main__container {
   margin: 0 auto;
+  padding: var(--main-padding);
   width: var(--nav-width);
   height: 100%;
+  box-sizing: border-box;
 }
