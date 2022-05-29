@@ -1,0 +1,10 @@
+:root {
+  /* Nav value */
+  --nav-width: 1240px;
+  --nav-menu-padding: 12px 0px;
+  --nav-menu-width: 105px;
+  --nav-button-color: rgb(204,204,204);
+  --nav-font-size: 14px;
+  --button-text-color: #fff;
+
+}

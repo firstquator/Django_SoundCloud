@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
-  {% load static %}
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'CSS/base.css' %}" type="text/css">
+  <script src="https://kit.fontawesome.com/9323719bfa.js" crossorigin="anonymous"></script>
+  <link 
+    rel="stylesheet" 
+    href="{% static 'CSS/base.css' %}" 
+    type="text/css"
+  />
   <title>Sound Cloud</title>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <ul class="nav-left-container">
-        <li class="nav-logo"><!-- Logo --></li>
-        <li class="nav-left-menu"><a href="#">Home</a></li>
-        <li class="nav-left-menu"><a href="#">Stream</a></li>
-        <li class="nav-left-menu"><a href="#">Library</a></li>
-      </ul>
-      <ul class="nav-center-container">
-        <input type="text" name="search" placeholder="Search">
+  <header class="header fixed">
+    <div class="header__container">
+      <div class="header__left">
+        <div class="header__logo selected">
+          <a class="header__logoImage" href=""></a>
+          <a class="header__logoText" href="">SOUNDCLOUD</a>
+          <!-- Logo --></div>
+        <ul class="header__navWrap">
+          <li><a class="header__navMenuItem selected" href="#">Home</a></li>
+          <li><a class="header__navMenuItem right__border" href="#">Stream</a></li>
+          <li><a class="header__navMenuItem right__border" href="#">Library</a></li>
+        </ul>  
+      </div>
+      <div class="header__middle">
+        <div class="header__search">
+          <input type="text" name="search" placeholder="Search">
+        </div>
         <!-- Search icon -->
-      </ul>
-      <ul class="nav-right-container">
+      </div>
+      <div class="header__right">
         <!-- None Login -->
-        <li class="nav-right-menu"><a href="#">sing in</a></li>
-        <li class="nav-right-menu"><a href="#">Create account</a></li>
-        <li class="nav-right-menu"><a href="#">Upload</a></li>
-        <li class="nav-right-menu"><a href="#"><!-- more icon --></a></li>
-      </ul>
+        <div class="header__loginMenu">
+          <button class="button__signin">Sign in</button>
+          <button class="button__account">Create accout</button>
+        </div>
+        <div class="header__navMenuItem header__upload">
+          <a href="#">Upload</a>
+        </div>
+        <ul class="header__more"><i class="fa-solid fa-ellipsis"></i></ul>
+      </div>
     </div>
-  </nav>
+  </header>
   {% block content %}
 
   {% endblock %}
