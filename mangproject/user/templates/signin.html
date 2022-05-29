@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block css %}
+{% load static %}
+  {% load static %}
+  <link 
+      rel="stylesheet" 
+      href="{% static 'CSS/User/signin.css' %}" 
+      type="text/css"
+  />
+{% endblock %}
+{% block content%}
+<div class="signin">
+  <h1>Sign in</h1>
+  <form class="signin__form" action="{% url 'signin' %}" method="POST">
+    <h3>Username</h3>
+    <input type="text" placeholder="Your username" name="username">
+    <h3>Password</h3>
+    <input type="pasword" placeholder="Your password" name="password">
+  </form>
+</div>
+{% endblock %}

@@ -39,8 +39,8 @@
       <div class="header__right">
         <!-- None Login -->
         <div class="header__loginMenu">
-          <button class="button__signin">Sign in</button>
-          <button class="button__account">Create accout</button>
+          <button class="button__signin"><a href="{% url 'signin' %}">Sign in</a></button>
+          <button class="button__account"><a href="{% url 'signup' %}">Create accout</a></button>
         </div>
         <div class="header__navMenuItem header__upload">
           <a href="#">Upload</a>
@@ -49,8 +49,13 @@
       </div>
     </div>
   </header>
-  {% block content %}
+  <main class="main">
+    <div class="main__container">
+      {% block content %}
 
-  {% endblock %}
+      {% endblock %}  
+    </div>
+  </main>
+  
 </body>
 </html>
