@@ -11,6 +11,9 @@
     href="{% static 'CSS/base.css' %}" 
     type="text/css"
   />
+  {% block css %}
+
+  {% endblock %}
   <title>Sound Cloud</title>
 </head>
 <body>
@@ -18,11 +21,11 @@
     <div class="header__container">
       <div class="header__left">
         <div class="header__logo selected">
-          <a class="header__logoImage" href=""></a>
-          <a class="header__logoText" href="">SOUNDCLOUD</a>
+          <a class="header__logoImage" href="{% url 'home' %}"></a>
+          <a class="header__logoText" href="{% url 'home' %}">SOUNDCLOUD</a>
           <!-- Logo --></div>
         <ul class="header__navWrap">
-          <li><a class="header__navMenuItem selected" href="#">Home</a></li>
+          <li><a class="header__navMenuItem selected" href="{% url 'home' %}">Home</a></li>
           <li><a class="header__navMenuItem right__border" href="#">Stream</a></li>
           <li><a class="header__navMenuItem right__border" href="#">Library</a></li>
         </ul>  

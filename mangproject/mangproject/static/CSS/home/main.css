@@ -1,0 +1,7 @@
+/*  */
+
+.main__container {
+  margin: 0 auto;
+  width: var(--nav-width);
+  height: 100%;
+}

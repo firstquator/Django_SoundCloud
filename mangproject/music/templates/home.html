@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link 
+      rel="stylesheet" 
+      href="{% static 'CSS/home/main.css' %}" 
+      type="text/css"
+  />
+{% endblock %}
 {% block content %}
+  <main class="main">
+    <div class="main__container">
+      <h1 class="home__headingTitle">Discover Tracks and Playlists</h1>
+    </div>
 
+  </main>
 {% endblock %}
