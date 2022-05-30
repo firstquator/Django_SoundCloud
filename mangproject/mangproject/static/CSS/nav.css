@@ -13,11 +13,26 @@
   position: fixed;
 }
 
+.media__width {
+  width: var(--full-width);
+}
+
+@media (max-width: 1239px) {
+  .media__width {
+    width: var(--medium-width);
+  }
+}
+
+@media (max-width: 1079px) {
+  .media__width {
+    width: var(--small-width);
+  }
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: var(--nav-width);
   height: 100%;
   font-size: var(--nav-font-size);
 }
@@ -149,10 +164,4 @@
   text-align: center;
   box-sizing: border-box;
   font-weight: 100;
-}
-
-.main__container {
-  margin: 0 auto;
-  width: var(--nav-width);
-  height: 100%;
 }

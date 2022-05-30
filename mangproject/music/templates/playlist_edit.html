@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block css %}
+{% load static %}
+  {% load static %}
+  <link 
+      rel="stylesheet" 
+      href="{% static 'CSS/Music/playlist_edit.css' %}" 
+      type="text/css"
+  />
+{% endblock %}
+{% block content%}
+<div class="signin">
+  <h1>Edit : {{playlist.name}}</h1>
+  <form class="playlist__edit__form" action="{% url 'playlist_edit' playlist.id %}" method="POST">
+    {% csrf_token %}
+    <h3>Genre</h3>
+    <input type="text" name="genre" value="{{playlist.genre}}">
+    <h3>Name of music</h3>
+    <input type="text" name="name" value="{{playlist.name}}">
+    <h3>Thumbnail</h3>
+    <input type="file" name="thumbnail">
+    <input type="submit" value="제출하기">
+  </form>
+</div>
+{% endblock %}

@@ -3,12 +3,12 @@
   {% load static %}
   <link 
       rel="stylesheet" 
-      href="{% static 'CSS/home/home.css' %}" 
+      href="{% static 'CSS/Music/playlist_detail.css' %}" 
       type="text/css"
   />
 {% endblock %}
 {% block content %}
-<div class="playlist__info">
+<div class="playlist__info media__width">
   <div class="info__text">
     <h1>{{playlist.name}}</h1>
     <h3>SoundCloud</h3>
@@ -18,4 +18,6 @@
     <img src="{{playlist.thumbnail.url}}" alt="">
   </div>
 </div>
+<a href="{% url 'playlist_delete' playlist.id %}"><button>Delete</button></a>
+<a href="{% url 'playlist_edit' playlist.id %}"><button>Edit</button></a>
 {% endblock %}

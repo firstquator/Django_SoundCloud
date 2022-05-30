@@ -4,6 +4,9 @@
 
 .home {
   display: flex;
+  padding: var(--main-padding);
+  height: 100%;
+
 }
 
 .home__left {
@@ -63,6 +66,7 @@
   position: sticky;
   width: var(--home-fixed-container);
   height: 100%;
+  padding-left: 30px;
 }
 
 .go__mobile__title {

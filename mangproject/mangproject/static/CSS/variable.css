@@ -1,7 +1,9 @@
 :root {
   /* Nav value */
+  --full-width: 1240px;
+  --medium-width: 1080px;
+  --small-width: 960px;
   --nav-height: 46px;
-  --nav-width: 1240px;
   --nav-menu-padding: 12px 0px;
   --nav-menu-width: 105px;
   --nav-button-color: rgb(204,204,204);

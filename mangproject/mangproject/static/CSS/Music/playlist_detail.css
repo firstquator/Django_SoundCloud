@@ -1,0 +1,21 @@
+@import '../variable.css';
+
+.playlist__info {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgb(162, 162, 157) 0%, rgb(181, 151, 89) 100%);
+  width: 100%;
+  height: 400px;
+  padding: 20px 10px 30px 10px;
+  box-sizing: border-box;
+}
+
+.info__thumbnail {
+  width: 340px;
+  height: 340px;
+}
+
+.info__thumbnail img {
+  width: 100%;
+  height: 100%;
+}

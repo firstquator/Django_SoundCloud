@@ -29,3 +29,23 @@ def upload(request):
 def playlist_detail(request, playlist_id):
   playlist_detail = Playlist.objects.get(id = playlist_id)
   return render(request, 'playlist_detail.html', {'playlist': playlist_detail})
+
+def playlist_delete(request, playlist_id):
+  Playlist.objects.get(id = playlist_id).delete()
+  return redirect('/')
+
+def playlist_edit(request, playlist_id):
+  playlist = Playlist.objects.get(id = playlist_id)
+  if request.method == 'POST':
+    playlist.genre = request.POST.get('genre')
+    playlist.name = request.POST.get('name')
+    playlist.pub_date = timezone.datetime.now()
+    try:
+      playlist.thumbnail = request.FILES['thumbnail']
+      
+    except:
+      pass
+    playlist.save()
+    return redirect(f'/music/{playlist_id}')
+  else:
+    return render(request, 'playlist_edit.html', {'playlist' : playlist})
