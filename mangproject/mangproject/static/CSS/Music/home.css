@@ -63,10 +63,14 @@
 }
 
 .home__right {
-  position: sticky;
   width: var(--home-fixed-container);
   height: 100%;
   padding-left: 30px;
+}
+
+.go__mobile {
+  position: sticky;
+  top: 80px;
 }
 
 .go__mobile__title {

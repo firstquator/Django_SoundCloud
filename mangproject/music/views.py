@@ -33,7 +33,7 @@ def playlist_detail(request, playlist_id):
 def playlist_delete(request, playlist_id):
   Playlist.objects.get(id = playlist_id).delete()
   return redirect('/')
-
+  
 def playlist_edit(request, playlist_id):
   playlist = Playlist.objects.get(id = playlist_id)
   if request.method == 'POST':

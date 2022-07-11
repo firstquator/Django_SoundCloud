@@ -10,7 +10,8 @@
 }
 
 .fixed {
-  position: fixed;
+  position: sticky;
+  top: 0;
 }
 
 .media__width {

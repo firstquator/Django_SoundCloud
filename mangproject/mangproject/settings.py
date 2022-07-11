@@ -125,7 +125,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mangproject', 'media')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mangproject', 'static'),
+    # os.path.join(BASE_DIR, 'mangproject', 'static'),
+    BASE_DIR / 'mangproject' /'static',
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
